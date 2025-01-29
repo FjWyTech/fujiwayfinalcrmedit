@@ -35,4 +35,7 @@ next-env.d.ts
 
 # temp directories
 temp/
-dist/ 
+dist/
+
+# development
+copycoder-prompts/ 
