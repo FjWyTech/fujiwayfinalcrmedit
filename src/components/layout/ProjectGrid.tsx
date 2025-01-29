@@ -6,12 +6,12 @@ import ProjectCard from '@/components/features/ProjectCard';
 const projects = [
   {
     id: 1,
-    title: 'Mobile App Development',
-    description: 'Design and develop a new mobile application for iOS and Android platforms',
+    title: 'Revuze',
+    description: 'AI-powered consumer insights and product analytics platform',
     status: 'In Progress' as const,
-    duration: '3 months',
+    duration: '6 months',
     location: 'Remote',
-    rate: '$85/hour',
+    rate: '$95/hour',
     logoUrl: 'https://picsum.photos/200/200?random=1',
     teamMembers: [
       { id: 1, name: 'John Doe', avatar: 'https://picsum.photos/200/200?random=2' },
@@ -21,12 +21,12 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Website Redesign',
-    description: 'Complete redesign of company website with modern UI/UX principles',
-    status: 'Upcoming' as const,
-    duration: '2 months',
+    title: 'FastFlo',
+    description: 'Automated workflow and business process optimization platform',
+    status: 'Completed' as const,
+    duration: '4 months',
     location: 'New York',
-    rate: '$95/hour',
+    rate: '$90/hour',
     logoUrl: 'https://picsum.photos/200/200?random=5',
     teamMembers: [
       { id: 4, name: 'Sarah Wilson', avatar: 'https://picsum.photos/200/200?random=6' },
@@ -35,12 +35,12 @@ const projects = [
   },
   {
     id: 3,
-    title: 'E-commerce Platform',
-    description: 'Build a scalable e-commerce platform with payment integration',
-    status: 'Completed' as const,
-    duration: '4 months',
-    location: 'London',
-    rate: '$90/hour',
+    title: 'ElexorAI',
+    description: 'Enterprise AI solutions for predictive analytics and automation',
+    status: 'Upcoming' as const,
+    duration: '8 months',
+    location: 'San Francisco',
+    rate: '$110/hour',
     logoUrl: 'https://picsum.photos/200/200?random=8',
     teamMembers: [
       { id: 6, name: 'Emily Davis', avatar: 'https://picsum.photos/200/200?random=9' },
