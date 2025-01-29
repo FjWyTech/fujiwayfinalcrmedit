@@ -9,6 +9,8 @@ import {
   AlertCircle,
 } from 'lucide-react';
 
+type ActivityType = 'project_update' | 'team_message' | 'task_completed' | 'comment' | 'file_upload';
+
 interface User {
   name: string;
   avatar: string;
@@ -16,7 +18,7 @@ interface User {
 
 interface Activity {
   id: number;
-  type: 'project_update' | 'team_message' | 'task_completed' | 'comment' | 'file_upload';
+  type: ActivityType;
   user: User;
   project?: string;
   team?: string;

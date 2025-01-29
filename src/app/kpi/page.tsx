@@ -8,6 +8,18 @@ export const metadata: Metadata = {
   description: 'Track and monitor your key performance indicators',
 };
 
+type GoalStatus = 'On Track' | 'At Risk' | 'Ahead';
+
+interface Goal {
+  id: number;
+  name: string;
+  target: string;
+  current: string;
+  progress: number;
+  status: GoalStatus;
+  dueDate: string;
+}
+
 const kpis = {
   sales: {
     current: {
@@ -47,7 +59,7 @@ const kpis = {
   },
 };
 
-const goals = [
+const goals: Goal[] = [
   {
     id: 1,
     name: 'Q1 Sales Target',

@@ -2,13 +2,15 @@
 
 import { Calendar, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 
+type GoalStatus = 'On Track' | 'At Risk' | 'Ahead';
+
 interface Goal {
   id: number;
   name: string;
   target: string;
   current: string;
   progress: number;
-  status: 'On Track' | 'At Risk' | 'Ahead';
+  status: GoalStatus;
   dueDate: string;
 }
 
@@ -44,6 +46,19 @@ const KpiGoalProgress = ({ goal }: KpiGoalProgressProps) => {
     });
   };
 
+  const getStatusColor = (status: GoalStatus) => {
+    switch (status) {
+      case 'On Track':
+        return 'text-blue-700 bg-blue-100';
+      case 'At Risk':
+        return 'text-red-700 bg-red-100';
+      case 'Ahead':
+        return 'text-green-700 bg-green-100';
+      default:
+        return 'text-gray-700 bg-gray-100';
+    }
+  };
+
   return (
     <div className="bg-gray-50 rounded-lg p-6">
       <div className="flex items-start justify-between mb-4">
@@ -54,11 +69,10 @@ const KpiGoalProgress = ({ goal }: KpiGoalProgressProps) => {
             <span>Due {formatDate(goal.dueDate)}</span>
           </div>
         </div>
-        <span className={`px-3 py-1 rounded-full text-sm font-medium ${statusColor}`}>
-          <div className="flex items-center space-x-1">
-            <StatusIcon className="w-4 h-4" />
-            <span>{goal.status}</span>
-          </div>
+        <span
+          className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(goal.status)}`}
+        >
+          {goal.status}
         </span>
       </div>
 

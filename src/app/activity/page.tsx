@@ -7,7 +7,28 @@ export const metadata: Metadata = {
   description: 'Track your team and project activities',
 };
 
-const activities = [
+type ActivityType = 'project_update' | 'team_message' | 'task_completed' | 'comment' | 'file_upload';
+
+interface Activity {
+  id: number;
+  type: ActivityType;
+  user: {
+    name: string;
+    avatar: string;
+  };
+  project?: string;
+  action?: string;
+  details?: string;
+  team?: string;
+  message?: string;
+  task?: string;
+  comment?: string;
+  files?: string[];
+  timestamp: string;
+  priority: 'high' | 'medium' | 'normal';
+}
+
+const activities: Activity[] = [
   {
     id: 1,
     type: 'project_update',
